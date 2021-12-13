@@ -1,5 +1,6 @@
 // 1. IMPORTACIONES
 const express 		= require("express")
+const Store = require ("../models/Store")
 const router		= express.Router()
 
 const storeController = require ("./../controllers/storeController")
