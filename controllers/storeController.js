@@ -3,11 +3,11 @@ const Store = require("./../models/Store");
 
 
 //crear tienda
-exports.postCreateStore = async (req, res) => {
+exports.create = async (req, res) => {
   const { domicilio, telefono } = req.body;
 
   try {
-    const newStore = await Store.postCreateStore({
+    const newStore = await Store.create({
       domicilio,
       telefono,
     });
@@ -17,6 +17,7 @@ exports.postCreateStore = async (req, res) => {
       msg: "Tienda creada con éxito!",
       data: newStore,
     });
+    
   } catch (error) {
     res.status(500).json({
       msg: "Hubo un error creando la tienda",
@@ -26,7 +27,7 @@ exports.postCreateStore = async (req, res) => {
 };
 
 //leer todas las tiendas
-exports.getReadStores = async (req, res) => {
+exports.readOne = async (req, res) => {
 
     try {
       const stores = await Store.find({})

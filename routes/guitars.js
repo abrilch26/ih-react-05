@@ -1,7 +1,7 @@
 // 1. IMPORTACIONES
-const express 		= require("express")
+const express = require("express")
 const Guitar = require("../models/Guitar")
-const router		= express.Router()
+const router = express.Router()
 
 const guitarController	= require("./../controllers/guitarController")
 

@@ -1,16 +1,16 @@
 // 1. IMPORTACIONES
-const express 		= require("express")
+const express = require("express")
 const Store = require ("../models/Store")
-const router		= express.Router()
+const router = express.Router()
 
 const storeController = require ("./../controllers/storeController")
 
 //RUTEOS
 //crear tienda
-router.post("/create", storeController.postCreateStore)
+router.post("/create", storeController.create)
 
 //Leer tienda
-router.get ("/readall", storeController.getReadStores)
+router.get ("/readall", storeController.readOne)
 
 //Leer una tienda 
 //router.get("/readone/:id", storeController.getOneStore)
